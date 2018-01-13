@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>appointments</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Appointment a visit</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
