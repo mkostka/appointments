@@ -26,6 +26,13 @@ public class LoginController {
 		modelAndView.setViewName("login");
 		return modelAndView;
 	}
+	
+	@RequestMapping(value = { "/access-denied" }, method = RequestMethod.GET)
+	public ModelAndView accessDenied() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("access-denied");
+		return modelAndView;
+	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.GET)
 	public ModelAndView registration() {
@@ -56,7 +63,7 @@ public class LoginController {
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = {"/user/home", "/admin/home"}, method = RequestMethod.GET)
 	public ModelAndView home() {
 		ModelAndView modelAndView = new ModelAndView();
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
